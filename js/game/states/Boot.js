@@ -1,17 +1,18 @@
-var Template = function () {};
-//template is that name of my file
+//Creating an global variable of the StreetBrawler object. Must only be done once
+var StreetBrawler = function () {};
 
-Template.Boot = function () {};
+StreetBrawler.Boot = function () {};
 
-Template.Boot.prototype = {
+StreetBrawler.Boot.prototype = {
+    
+    //adding methods to the class
     preload: function () {
         // use your own images;
-
-        //this.load.image("logo", "assests/images/logo.png");
-        this.load.image("preloadBar", "assests/images/preloader-bar.png");
+        this.load.image('preloadBar', 'assets/images/preloader-bar.png');
 
     },
     create: function() {
+        
         this.game.stage.backgroundColor = "fff";
         
         //how many fingers/ clickers you want
@@ -32,8 +33,7 @@ Template.Boot.prototype = {
         }
         // this a all the game configurations 
         // now begins the loading of the actual game assests
-        //this commanf will move the game on to the next statea
-        console.log("about to go to preload");
+        // this command will move the game on to the next state
         this.state.start('Preload');
     }
 };

@@ -1,14 +1,17 @@
-Final-Stand-.MainMenun = function () {}
-tmplate.MainMenu.prototype = {
-    preload : function()
-     this.load.image ('whatever','assests/images/marla.png');
-},
+StreetBrawler.MainMenu = function() {}
 
-create: function(){
-
-  this. pic = this. game .add. sprite (this.game.width/2, this.game.height/2 , 'whatever');
-};
-      }
+StreetBrawler.MainMenu.prototype = {    
+    create: function(){
+        this.background = this.add.sprite(0,0,'background');
+        this.background.scale.setTo(5);
+        this.add.text(16, 16, "Current State:MainMenu.", { font: "16px Arial", fill: "#ffffff" });
+        this.add.text(16, 32, "Click to Start Game.", { font: "16px Arial", fill: "#ffffff" });
+    },
+    
+    update: function() {
+        if(this.game.input.activePointer.justPressed()){
+            this.game.state.start("Game");
+        }
+    }
+    
 }
-
-
