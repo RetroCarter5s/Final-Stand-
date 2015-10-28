@@ -110,3 +110,4 @@ StreetBrawler.Game.prototype = {
         }
     },
 }
+var player = this.game.addsprite 

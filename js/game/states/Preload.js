@@ -6,8 +6,7 @@ StreetBrawler.Preload.prototype = {
         //note to self you have to preload all the assets you want to use in the state before. Then you can actually use them. Cant use             them if you preload and create them in the same state.
         this.load.image('background', 'assets/images/background.png');
         this.load.image('preloadBar', 'assets/images/preloader-bar.png');
-
-        this.load.image('player', 'assets/images/player.png');
+         this.load.spritesheet('player' , 'assets/images/badass girl.png');
         this.load.image('enemy','assets/images/enemy.png');
 
         this.preloadBar = this.add.sprite(this.game.world.centerX, this.game.world.centerY+ 128, 'preloadBar');
