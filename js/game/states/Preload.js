@@ -8,7 +8,7 @@ StreetBrawler.Preload.prototype = {
         this.load.image('preloadBar', 'assets/images/preloader-bar.png');
          this.load.spritesheet('player' , 'assets/images/badass girl.png');
         this.load.image('enemy','assets/images/enemy.png');
-
+        this.spritesheet.('
         this.preloadBar = this.add.sprite(this.game.world.centerX, this.game.world.centerY+ 128, 'preloadBar');
         this.preloadBar = this.preloadBar.anchor.setTo(0.5);
         this.add.text(16, 16, "State: preload", { font: "16px Arial", fill: "#ffffff" }); 
