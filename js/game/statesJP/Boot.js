@@ -1,4 +1,4 @@
-//Creating an global variable of the StreetBrawler object. Must only be done once
+//Creating an global variable of the paperToss object. Must only be done once
 var FinalStand = function () {};
 
 FinalStand.Boot = function () {};
@@ -33,7 +33,9 @@ FinalStand.Boot.prototype = {
         }
         // this a all the game configurations 
         // now begins the loading of the actual game assests
-        // this command will move the game on to the next state
+        //this commanf will move the game on to the next statea
         this.state.start('Preload');
     }
 };
+
+//and shit
