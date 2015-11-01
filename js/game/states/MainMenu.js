@@ -1,3 +1,4 @@
+
 FinalStand.MainMenu = function() {}
 
 FinalStand.MainMenu.prototype = {    

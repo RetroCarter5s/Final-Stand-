@@ -1,3 +1,4 @@
+
 FinalStand .Game = function() {}
 
 FinalStand.Game.prototype = {
@@ -110,3 +111,4 @@ FinalStand.Game.prototype = {
         }
     },
 }
+
