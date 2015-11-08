@@ -39,15 +39,3 @@ FinalStand.Game.prototype = {
     }
 }
 
-
-<<<<<<< HEAD
-=======
-            if (this.leftKey.isDown) {
-                this.player.body.velocity.x = -275;
-                this.player.scale.x = -1
-            }
-        }
-    },
-}
-
->>>>>>> origin/master
