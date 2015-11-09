@@ -11,7 +11,7 @@ FinalStand.Game.prototype = {
         this.physics.enable(this.player, Phaser.Physics.ARCADE);
         this.player.body.collideWorldBounds = true;
         this.player.anchor.setTo(0.5, 1);
-        
+        this.weapons= new gun.AK(this.game);
 
         this.leftKey = this.input.keyboard.addKey(Phaser.Keyboard.A);
         this.rightKey = this.input.keyboard.addKey(Phaser.Keyboard.D);
@@ -19,6 +19,7 @@ FinalStand.Game.prototype = {
         this.downKey = this.input.keyboard.addKey(Phaser.Keyboard.S);
         this.spawnEnemy();
         
+        this.shoot = this.input.keyboard.addKey(Phaser.Keyboard.L);
     },
 // neghdshnrzjshjghaegnsgrjsgrnxfghmsmsryfghfnh
     update: function() {
@@ -40,7 +41,12 @@ FinalStand.Game.prototype = {
             this.player.body.velocity.x = 0;
             this.player.body.velocity.y = 0;
         }
+        if (this.shoot.isDown) {
+            this.weapons.fire(this.player);
+        }
+
     },
+    
     spawnEnemy: function() {
         this.enemy = this.game.add.sprite(540, 150, 'enemy');
         this.game.physics.enable(this.enemy, Phaser.Physics.ARCADE);
