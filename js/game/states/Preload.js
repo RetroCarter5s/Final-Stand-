@@ -8,10 +8,10 @@ FinalStand.Preload.prototype = {
 
         this.load.image('background', 'assets/images/checkerboard.png');
         this.load.image('preloadBar', 'assets/images/preloader-bar.png')
-        this.load.image('player', 'assets/images/player.png');
+        //this.load.image('player', 'assets/images/player.png');
         this.load.image('enemy','assets/images/enemy.png');
-        
-
+        this.load.image('AK','assets/images/AK.png');
+        this.load.image('bullet','assets/images/bullet.png');
         this.load.spritesheet('player' , 'assets/images/BadassGirl.png');
         this.load.image('enemy','assets/images/enemy.png');
 
