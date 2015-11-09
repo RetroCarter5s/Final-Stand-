@@ -1,5 +1,7 @@
 
-FinalStand .Game = function() {}
+FinalStand .Game = function() {
+    var enemyHP = 100;
+}
 
 FinalStand.Game.prototype = {
     create: function() {
@@ -15,6 +17,8 @@ FinalStand.Game.prototype = {
         this.rightKey = this.input.keyboard.addKey(Phaser.Keyboard.D);
         this.upKey = this.input.keyboard.addKey(Phaser.Keyboard.W);
         this.downKey = this.input.keyboard.addKey(Phaser.Keyboard.S);
+        this.spawnEnemy();
+        
     },
 // neghdshnrzjshjghaegnsgrjsgrnxfghmsmsryfghfnh
     update: function() {
@@ -36,18 +40,15 @@ FinalStand.Game.prototype = {
             this.player.body.velocity.x = 0;
             this.player.body.velocity.y = 0;
         }
+    },
+    spawnEnemy: function() {
+        this.enemy = this.game.add.sprite(540, 150, 'enemy');
+        this.game.physics.enable(this.enemy, Phaser.Physics.ARCADE);
+        this.walk = this.enemy.animations.add('walk');
+        this.enemy.body.collideWorldBounds = true;
+        this.enemy.body.fixedRotation = false;
+        this.enemyText = this.game.add.text(this.enemy.body.x, this.enemy.body.y - 30, this.enemyHP);
+        this.enemy.animations.play('walk', 30, true);
     }
 }
 
-
-<<<<<<< HEAD
-=======
-            if (this.leftKey.isDown) {
-                this.player.body.velocity.x = -275;
-                this.player.scale.x = -1
-            }
-        }
-    },
-}
-
->>>>>>> origin/master

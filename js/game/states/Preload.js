@@ -8,12 +8,13 @@ FinalStand.Preload.prototype = {
 
         this.load.image('background', 'assets/images/checkerboard.png');
         this.load.image('preloadBar', 'assets/images/preloader-bar.png')
-        this.load.image('player', 'assets/images/player.png');
-        this.load.image('enemy','assets/images/enemy.png');
+       // this.load.image('player', 'assets/images/player.png');
+        //this.load.image('enemy','assets/images/enemy.png');
         
 
         this.load.spritesheet('player' , 'assets/images/BadassGirl.png');
-        this.load.image('enemy','assets/images/enemy.png');
+        this.load.image('enemy','assets/images/MrAss.png');
+        this.load.game.load.spritesheet('enemy', 'assets/images/Zombies.png', 30, 32);
 
     },
     create: function() {
